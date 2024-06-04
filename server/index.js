@@ -24,7 +24,6 @@ app.use('/Questions',QuestionRoutes)
 app.use('/answer',answerRoutes)
 
 const PORT = process.env.PORT || 5000
-
 const DATABASE_URL = process.env.CONNECTION_URL 
 
 
