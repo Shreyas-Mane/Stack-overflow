@@ -11,8 +11,12 @@ const app=express();
 dotenv.config();
 app.use(express.json({limit: "30mb", extended:true}))
 //    getting response to the request which has limit and we can extend it too 
-
 app.use(express.urlencoded({limit:"30mb", extended:true}))
+
+const corsOptions = {
+    origin: process.env.FRONTEND_URL, // Front-end URL from environment variable
+    optionsSuccessStatus: 200
+}   
 app.use(cors())
 
 app.get('/',(req,res)=>{
