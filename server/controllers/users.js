@@ -5,7 +5,7 @@ export const getAllUsers = async (req, res)=>{
     try {
         const allUsers = await users.find();
         const allUsersDetails = []
-        allUsers.forEach(users =>{
+        allUsers.forEach((users) =>{
             allUsersDetails.push({_id: users._id,
                 name: users.name,
                 about: users.about,
