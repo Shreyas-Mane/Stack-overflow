@@ -1,22 +1,13 @@
 import axios from 'axios'
 
-const API = axios.create({baseURL:'https://stack-overflow-production-4ol4.onrender.com'})
+const API = axios.create({baseURL:'https://stack-overflow-production-4ol4.onrender.com/'})
 
 API.interceptors.request.use((req)=>{
     if(localStorage.getItem("Profile")){
         req.headers.authorization= `Bearer ${JSON.parse(localStorage.getItem("Profile")).token}`
     }
      return req;
-},(error) => {
-    console.error('Request error:', error);
-    return Promise.reject(error);
-});
-
-API.interceptors.response.use((response) => response, (error) => {
-    console.error('Response error:', error);
-    return Promise.reject(error);
-});
-
+})
 
 
 export const logIn = (authData) => API.post('/user/login',authData);
