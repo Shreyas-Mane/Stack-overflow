@@ -7,7 +7,16 @@ API.interceptors.request.use((req)=>{
         req.headers.authorization= `Bearer ${JSON.parse(localStorage.getItem("Profile")).token}`
     }
      return req;
-})
+},(error) => {
+    console.error('Request error:', error);
+    return Promise.reject(error);
+});
+
+API.interceptors.response.use((response) => response, (error) => {
+    console.error('Response error:', error);
+    return Promise.reject(error);
+});
+
 
 
 export const logIn = (authData) => API.post('/user/login',authData);
