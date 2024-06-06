@@ -14,9 +14,11 @@ app.use(express.json({limit: "30mb", extended:true}))
 app.use(express.urlencoded({limit:"30mb", extended:true}))
 
 const corsOptions = {
-    origin: process.env.FRONTEND_URL, // Front-end URL from environment variable
-    optionsSuccessStatus: 200
-}   
+    origin: ['https://stack-overflow-cdk5400.netlify.app'],
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    preflightContinue: false,
+    optionsSuccessStatus: 204
+};   
 app.use(cors(corsOptions));
 
 app.get('/',(req,res)=>{
