@@ -15,7 +15,7 @@ app.use(express.urlencoded({limit:"30mb", extended:true}))
 
 const corsOptions = {
     origin: 'https://stack-overflow-cdk5400.netlify.app',
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE','PATCH', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'authorization'],
     credentials: true,
     optionsSuccessStatus: 200
