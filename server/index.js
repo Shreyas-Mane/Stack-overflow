@@ -17,7 +17,7 @@ const corsOptions = {
     origin: process.env.FRONTEND_URL, // Front-end URL from environment variable
     optionsSuccessStatus: 200
 }   
-app.use(cors())
+app.use(cors(corsOptions));
 
 app.get('/',(req,res)=>{
     res.send("This is a stack overflow clone API")
