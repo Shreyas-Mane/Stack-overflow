@@ -88,3 +88,69 @@
     cursor: pointer;
 }
 
+/* Tablet view */
+@media (min-width: 600px) and (max-width: 900px) {
+    .auth-container-1 {
+      margin-right: 15px;
+      padding: 10px;
+    }
+  
+    .login-logo {
+      padding: 15px 20px;
+    }
+  
+    .auth-container-2 {
+      min-width: 40%;
+    }
+  
+    .auth-container-2 form {
+      padding: 15px;
+    }
+  
+    .auth-container-2 form label input {
+      padding: 8px;
+      width: calc(100% - 20px);
+    }
+  
+    .auth-btn {
+      padding: 8px 5px;
+    }
+  }
+  
+  /* Mobile view */
+  @media (max-width: 600px) {
+    .auth-section {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 20px 0;
+    }
+  
+    .auth-container-1 {
+      margin-right: 0;
+      margin-bottom: 20px;
+      padding: 10px;
+      text-align: center;
+    }
+  
+    .login-logo {
+      padding: 10px 15px;
+    }
+  
+    .auth-container-2 {
+      min-width: 80%;
+    }
+  
+    .auth-container-2 form {
+      padding: 10px;
+    }
+  
+    .auth-container-2 form label input {
+      padding: 6px;
+      width: calc(100% - 12px);
+    }
+  
+    .auth-btn {
+      padding: 6px 5px;
+    }
+  }
+

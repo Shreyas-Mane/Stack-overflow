@@ -35,3 +35,47 @@
     line-height: 17px;
 }
 
+/* Tablet view */
+@media (min-width: 600px) and (max-width: 900px) {
+    .tags-list-container {
+      padding: 20px 0px;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 8px;
+    }
+  
+    .tag {
+      padding: 8px;
+    }
+  
+    .tag h5 {
+      font-size: 14px;
+    }
+  
+    .tag p {
+      font-size: 13px;
+    }
+  }
+  
+  /* Mobile view */
+  @media (max-width: 600px) {
+    .tags-list-container {
+      padding: 10px 0px;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 5px;
+    }
+  
+    .tag {
+      padding: 5px;
+    }
+  
+    .tag h5 {
+      font-size: 12px;
+      padding: 4px 4px;
+    }
+  
+    .tag p {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+

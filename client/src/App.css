@@ -15,9 +15,29 @@
     box-sizing: border-box;
 }
 
-@media screen and (max-width: 760px) {
+/* @media screen and (max-width: 760px) {
     .home-container-2 {
       max-width: 100%;
       width: 100%;
     }
+  } */
+
+  @media only screen and (min-width: 600px) and (max-width: 900px) {
+    .home-container-2 {
+      max-width: 700px; /* Adjust max-width */
+      width: calc(100% - 48px); /* Adjust width */
+      padding: 16px; /* Reduce padding */
+    }
   }
+  
+  @media only screen and (max-width: 600px) {
+    .home-container-1 {
+      flex-direction: column; /* Stack elements vertically */
+    }
+  
+    .home-container-2 {
+      max-width: 100%; /* Adjust max-width */
+      width: calc(100% - 32px); /* Adjust width */
+      padding: 12px; /* Reduce padding */
+    }
+  }  

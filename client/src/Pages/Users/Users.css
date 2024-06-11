@@ -23,3 +23,38 @@
     margin: 0px 10px;
      
 }
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .user-list-container {
+      padding: 25px 0px; /* Adjust padding */
+      gap: 20px; /* Adjust gap */
+    }
+  
+    .user-profile-link h3 {
+      padding: 10px 12px; /* Adjust padding */
+      font-size: 14px; /* Adjust font size */
+    }
+  
+    .user-profile-link h5 {
+      margin: 0px 12px; /* Adjust margin */
+      font-size: 14px; /* Adjust font size */
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .user-list-container {
+      padding: 15px 0px; /* Reduce padding */
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust grid columns */
+      gap: 15px; /* Reduce gap */
+    }
+  
+    .user-profile-link h3 {
+      padding: 8px 10px; /* Adjust padding */
+      font-size: 12px; /* Adjust font size */
+    }
+  
+    .user-profile-link h5 {
+      margin: 0px 8px; /* Adjust margin */
+      font-size: 12px; /* Adjust font size */
+    }
+  }
